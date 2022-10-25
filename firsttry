@@ -9,9 +9,25 @@
 # C3 av = 12, sd = 5
 
 def exploitOnly()
+  # generate random happiness values for each caf to find highest out of the first 3 days
+  C1 = random.normalvariate(10, 8)
+  C2 = random.normalvariate(15, 6)
+  C3 = random.normalvariate(12, 5)
+  
+  if C1 > C2 and C1 > C3:
+    # run 297 trials for C1
+    
+  elif C2 > C1 and C2 > C3:
+    # run 297 trials for C2
+    
+  elif C3 > C1 and C3 > C2:
+    # run 297 trials for C3
 
 def exploreOnly()
+  # return sum of each caf for 100 days
+
 
 def eGreedy(e)
+  # 
 
 def simulation(t, e)
