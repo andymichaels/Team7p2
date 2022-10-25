@@ -1,0 +1,17 @@
+# HOW TO CALCULATE HAPPINESS
+# import random
+# Get random number for a normal distribution with
+# mean of H1 and standard deviation of D1.
+# Happiness = random.normalvariate(H1, D1)
+
+# C1 av = 10, sd = 8
+# C2 av = 15, sd = 6
+# C3 av = 12, sd = 5
+
+def exploitOnly()
+
+def exploreOnly()
+
+def eGreedy(e)
+
+def simulation(t, e)
