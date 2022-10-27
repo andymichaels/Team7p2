@@ -8,6 +8,8 @@
 # C2 av = 15, sd = 6
 # C3 av = 12, sd = 5
 
+import random
+
 def exploitOnly() -> int:
   # generate random happiness values for each caf to find highest out of the first 3 days
   C1 = random.normalvariate(10, 8)
