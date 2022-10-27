@@ -1,1 +1,40 @@
 # add your finished functions here
+
+
+def exploitOnly() -> int:
+    # generate random happiness values for each caf to find highest out of the first 3 days
+    C1 = random.normalvariate(10, 8)
+    C2 = random.normalvariate(15, 6)
+    C3 = random.normalvariate(12, 5)
+    
+    # create the total and add to it the first three days
+    total = C1 + C2 + C3
+
+    # if cafe 1 gave you the highest score, go to that cafe for the remaining days
+    if C1 > C2 and C1 > C3:
+        # run 297 trials for C1
+        i = 0
+        while i <= 297:
+            C1 = random.normalvariate(10, 8)
+            total += C1
+            i += 1
+
+    # if cafe 2 gave you the highest score, go to that cafe for the remaining days
+    elif C2 > C1 and C2 > C3:
+    # run 297 trials for C2
+        i = 0
+        while i <= 297:
+            C2 = random.normalvariate(15, 6)
+            total += C2
+            i += 1
+
+    # if cafe 3 gave you the highest score, go to that cafe for the remaining days
+    elif C3 > C1 and C3 > C2:
+    # run 297 trials for C3
+        i = 0
+        while i <= 297:
+            C3 = random.normalvariate(12, 5)
+            total += C3
+            i += 1
+
+    return total
