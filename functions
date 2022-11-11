@@ -122,4 +122,61 @@ def eGreedy(e=10) -> int:
                 i += 1
 
     return total
+    
+    def simulation(t,e):
+    
+    #initial values for num and exploit(variables used in while loop)
+    num = 0
+    exploit = 0 
+    explore = 0 
+    greedy = 0
+    
+    #runs each function through the number of trials
+    while num > t:
+    exploit += exploitOnly()
+    greedy += exploreOnly()
+    num += 1
+    
+    #finds average happiness by taking by taking variable which 
+    #in sum of all trials of each function and dividing by amount of trials 
+    explore_avHap = explore / t
+    explore_avHap = exploit / t 
+    greedy_avHop = greedy / t
+    
+    #finds optimum happiness 
+    opt.Happiness = 300 * 15
+    
+    #finds total happiness for exploit 
+    exploit_totHap = 10 + 12 + 15 + 297*15
+    exploit_totReg = optHappiness - exploit_totHap
+    
+    #finds total happiness for explore
+    explore_totHap =(10*100) + (12*100) + (15*100)
+    explore_totReg = optHappiness - explore_totHap
+    
+    #finds total happiness for eGreedy
+    num1 = ((100-e)/100 * 300
+    num2 = ((e/3)/100) * 300
+    greedy_totHap = (15*num1) + (15*num2) + (12*num2) + (10*num2)
+    greedy_totReg = opt.Happiness - greedy_totHap
+    
+    explore_avReg = optHappiness - explore_avHap
+    exploit_avReg = optHappiness - exploit_avHap
+    greedy_avReg = optHappiness - greedy_avHap
+    
+    #prints all results in table form
+    print(*Optimum Happiness: optimumHappiness)
+    print()
+    print(*Function Expected ExpRegret Average AveRegret*)
+    print("------ -------- ------- -------- --------")
+    print("Explore %5d" % explore_totHap,"  %5d " %explore_totReg, " %5d % explore_avHap,
+            "   %5d" % explore_avReg)
+    print("Exploit %5d " % exploit_totHap, " %5d "%explore_totReg, " %5d % exploit_avHap,
+            "   %5d" %greedy_avReg)
+    print("eGreedy %5d " % greedy_totHap, " %5d " greedy_totRegm " %5d % greedy_avHap,
+            "   %5d" % greedy_avReg)
+            
+    Simulation(10,10)
+    
+    
 
